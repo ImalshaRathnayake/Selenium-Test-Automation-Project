@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="1">
+
+    <test name="firefox_testCase">
+        <parameter name="url" value="https://www.ebay.com/"/>
+        <parameter name="browser" value="firefox"/>
+        <classes>
+
+            <class name="org.example.BaseTest">
+                <methods>
+                    <include name="openUrl"/>
+                    <include name="selectCategory"/>
+                    <include name="filterByBrand"/>
+
+                </methods>
+            </class>
+
+            <class name="org.example.navigateToFirst">
+                <methods>
+                    <include name="selectProductOptions"/>
+                    <include name="productName"/>
+                    <include name="addCart"/>
+                    <include name="assertShoppingCart"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+<!-->
+    <test name="chrome_testCase">
+        <parameter name="url" value="https://www.ebay.com/"/>
+        <parameter name="browser" value="chrome"/>
+        <classes>
+
+            <class name="org.example.BaseTest">
+                <methods>
+                    <include name="openUrl"/>
+                    <include name="selectCategory"/>
+                    <include name="filterByBrand"/>
+
+                </methods>
+            </class>
+
+            <class name="org.example.navigateToFirst">
+                <methods>
+                    <include name="selectProductOptions"/>
+                    <include name="productName"/>
+                    <include name="addCart"/>
+                    <include name="assertShoppingCart"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+<!-->
+</suite>
